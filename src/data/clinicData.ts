@@ -155,14 +155,16 @@ export const DENTAL_PLANS: DentalPlan[] = [
     id: 'rede-dental',
     name: 'Rede Dental',
     category: 'Convênio Dental',
-    accentColor: '#008542',
-    symbol: 'RD'
+    accentColor: '#00A0E0',
+    symbol: 'RD',
+    logoUrl: '/assets/plans/rededental.png'
   },
   {
     id: 'dentalwhite',
     name: 'DentalWhite',
     category: 'Planos Odonto',
-    accentColor: '#0D9488',
-    symbol: 'DW'
+    accentColor: '#006699',
+    symbol: 'DW',
+    logoUrl: '/assets/plans/dentalwhite.png'
   }
 ];

@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 72" width="280" height="72" fill="none">
+  <defs>
+    <linearGradient id="dw-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06B6D4"/>
+      <stop offset="100%" stop-color="#0F766E"/>
+    </linearGradient>
+    <linearGradient id="dw-sparkle" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#FFFFFF"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Dental White Icon: Luminous Tooth with Brilliant Star -->
+  <g transform="translate(6, 6)">
+    <!-- Base smooth rounded badge -->
+    <rect x="0" y="0" width="60" height="60" rx="16" fill="url(#dw-grad)"/>
+    
+    <!-- Stylized Brilliant Tooth -->
+    <path d="M30 13 C22 13 17 18 17 25 C17 31.5 20.5 38 23.5 45 C25 48.5 27.5 48.5 28.5 45 C29.2 42.5 29.6 39 30 36 C30.4 39 30.8 42.5 31.5 45 C32.5 48.5 35 48.5 36.5 45 C39.5 38 43 31.5 43 25 C43 18 38 13 30 13 Z" fill="#FFFFFF"/>
+    
+    <!-- Dynamic smile curve -->
+    <path d="M22 28 C25 33 35 33 38 28" stroke="#0D9488" stroke-width="2.5" stroke-linecap="round"/>
+
+    <!-- Brilliant 4-point Sparkle / Star (White Effect) -->
+    <path d="M44 14 Q44 20 50 20 Q44 20 44 26 Q44 20 38 20 Q44 20 44 14 Z" fill="url(#dw-sparkle)"/>
+    <circle cx="44" cy="20" r="1.5" fill="#FFFFFF"/>
+    
+    <!-- Mini sparkle -->
+    <path d="M16 38 Q16 41 19 41 Q16 41 16 44 Q16 41 13 41 Q16 41 16 38 Z" fill="#E0F2FE"/>
+  </g>
+
+  <!-- Typography -->
+  <g transform="translate(76, 12)">
+    <!-- "DENTAL" -->
+    <text x="0" y="27" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Montserrat, sans-serif" font-size="22" font-weight="900" fill="#0F172A" letter-spacing="-0.2">DENTAL</text>
+    
+    <!-- "WHITE" -->
+    <text x="96" y="27" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Montserrat, sans-serif" font-size="22" font-weight="900" fill="#0D9488" letter-spacing="-0.2">WHITE</text>
+
+    <!-- Subtitle divider -->
+    <rect x="0" y="34" width="180" height="1.5" fill="#0D9488" opacity="0.4"/>
+    
+    <!-- Subtitle -->
+    <text x="0" y="45" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Montserrat, sans-serif" font-size="7" font-weight="800" fill="#0D9488" letter-spacing="1.5">ASSISTÊNCIA ODONTOLÓGICA</text>
+  </g>
+</svg>
