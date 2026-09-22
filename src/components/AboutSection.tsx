@@ -63,7 +63,7 @@ export const AboutSection: React.FC = () => {
     {
       icon: Smile,
       title: 'Conforto',
-      desc: 'Ambiente acolhedor e atendimento humanizado',
+      desc: 'Ambiente leve e acolhedor',
       color: 'from-rose-50 to-white',
       border: 'border-rose-100',
       iconColor: 'text-[#7A1526]'
@@ -71,7 +71,7 @@ export const AboutSection: React.FC = () => {
     {
       icon: ShieldCheck,
       title: 'Segurança',
-      desc: 'Protocolos de biossegurança de nível hospitalar',
+      desc: 'Máxima proteção e higiene',
       color: 'from-slate-50 to-white',
       border: 'border-slate-100',
       iconColor: 'text-slate-800'
@@ -79,7 +79,7 @@ export const AboutSection: React.FC = () => {
     {
       icon: Award,
       title: 'Qualidade',
-      desc: 'Materiais de alta performance e tecnologia moderna',
+      desc: 'Tecnologia e precisão',
       color: 'from-amber-50 to-white',
       border: 'border-amber-100',
       iconColor: 'text-amber-700'
@@ -296,7 +296,7 @@ export const AboutSection: React.FC = () => {
                 <h3 className="font-heading font-bold text-xs sm:text-sm text-slate-900">
                   {item.title}
                 </h3>
-                <p className="mt-1 text-[10px] sm:text-xs text-slate-500 line-clamp-2 leading-tight">
+                <p className="mt-1 text-[10px] sm:text-xs text-slate-600 leading-snug">
                   {item.desc}
                 </p>
               </div>
