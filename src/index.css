@@ -1,0 +1,171 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #36050C;
+    color: #F8FAFC;
+    overflow-x: hidden;
+  }
+  h1, h2, h3, h4, .font-heading {
+    font-family: 'Outfit', sans-serif;
+  }
+}
+
+/* Sophisticated Deep Bordeaux Backgrounds & Mesh */
+.bg-bordeaux-canvas {
+  background: radial-gradient(circle at 50% 0%, #630C1C 0%, #460712 45%, #30040B 100%);
+}
+
+.bg-bordeaux-deep {
+  background: linear-gradient(180deg, #460712 0%, #35050C 50%, #2A0309 100%);
+}
+
+.bg-bordeaux-velvet {
+  background: linear-gradient(135deg, #570B18 0%, #420610 50%, #2E0308 100%);
+}
+
+/* Floating White Card (Contraste elegante e sofisticado) */
+.card-floating-white {
+  background: #FFFFFF;
+  color: #0F172A;
+  border-radius: 1.75rem; /* 28px */
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 24px 60px -12px rgba(0, 0, 0, 0.45), 
+              0 10px 24px -6px rgba(45, 4, 11, 0.25),
+              inset 0 1px 2px rgba(255, 255, 255, 1);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-floating-white:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 32px 70px -12px rgba(0, 0, 0, 0.55), 
+              0 16px 32px -6px rgba(45, 4, 11, 0.35);
+}
+
+/* Floating Velvet Wine Card (Elegância translúcida com brilho perolado) */
+.card-floating-wine {
+  background: linear-gradient(160deg, rgba(88, 12, 24, 0.85) 0%, rgba(52, 6, 13, 0.92) 100%);
+  color: #FFFFFF;
+  border-radius: 1.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(16px);
+  box-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.4),
+              inset 0 1px 1.5px rgba(255, 255, 255, 0.25),
+              inset 0 -1px 2px rgba(0, 0, 0, 0.4);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-floating-wine:hover {
+  transform: translateY(-3px);
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 28px 60px -10px rgba(0, 0, 0, 0.5),
+              inset 0 1px 2px rgba(255, 255, 255, 0.35);
+}
+
+/* Custom 3D buttons and luxury lighting */
+.btn-3d-bordeaux {
+  background: linear-gradient(135deg, #8E1428 0%, #6E0D1D 50%, #4D0712 100%);
+  box-shadow: 0 12px 28px -5px rgba(0, 0, 0, 0.4), 
+              0 4px 10px -2px rgba(110, 13, 29, 0.3), 
+              inset 0 1px 1.5px 0 rgba(255, 255, 255, 0.35),
+              inset 0 -2px 4px 0 rgba(0, 0, 0, 0.4);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-3d-bordeaux:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #9E172D 0%, #7B1021 50%, #570915 100%);
+  box-shadow: 0 18px 36px -6px rgba(0, 0, 0, 0.5), 
+              0 8px 16px -2px rgba(123, 16, 33, 0.35), 
+              inset 0 1px 2px 0 rgba(255, 255, 255, 0.45);
+}
+
+.btn-3d-bordeaux:active {
+  transform: translateY(1px);
+  box-shadow: 0 4px 12px -2px rgba(0, 0, 0, 0.4), 
+              inset 0 2px 4px 0 rgba(0, 0, 0, 0.4);
+}
+
+.btn-3d-white {
+  background: linear-gradient(180deg, #FFFFFF 0%, #F4F6F8 100%);
+  color: #550A16;
+  box-shadow: 0 12px 30px -5px rgba(0, 0, 0, 0.35), 
+              0 4px 8px -2px rgba(0, 0, 0, 0.2), 
+              inset 0 1px 2px 0 rgba(255, 255, 255, 1),
+              inset 0 -1px 2px 0 rgba(0, 0, 0, 0.08);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-3d-white:hover {
+  transform: translateY(-2px);
+  background: #FFFFFF;
+  color: #7A1224;
+  box-shadow: 0 18px 38px -6px rgba(0, 0, 0, 0.45), 
+              0 6px 12px -2px rgba(0, 0, 0, 0.25);
+}
+
+.btn-3d-white:active {
+  transform: translateY(1px);
+}
+
+.btn-3d-instagram {
+  background: linear-gradient(135deg, #833AB4 0%, #C13584 50%, #E1306C 80%, #FD1D1D 100%);
+  box-shadow: 0 12px 30px -5px rgba(0, 0, 0, 0.4), 
+              0 4px 10px -2px rgba(193, 53, 132, 0.3), 
+              inset 0 1px 1.5px 0 rgba(255, 255, 255, 0.4),
+              inset 0 -2px 4px 0 rgba(0, 0, 0, 0.25);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-3d-instagram:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 36px -6px rgba(0, 0, 0, 0.5), 
+              0 8px 16px -2px rgba(193, 53, 132, 0.35);
+}
+
+.btn-3d-whatsapp {
+  background: linear-gradient(135deg, #25D366 0%, #20BA5C 50%, #128C7E 100%);
+  box-shadow: 0 12px 30px -5px rgba(0, 0, 0, 0.4), 
+              0 4px 10px -2px rgba(37, 211, 102, 0.3), 
+              inset 0 1px 1.5px 0 rgba(255, 255, 255, 0.4),
+              inset 0 -2px 4px 0 rgba(0, 0, 0, 0.25);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-3d-whatsapp:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 36px -6px rgba(0, 0, 0, 0.5), 
+              0 8px 16px -2px rgba(37, 211, 102, 0.4);
+}
+
+.text-gold-gradient {
+  background: linear-gradient(135deg, #FDE68A 0%, #F59E0B 50%, #D97706 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-silver-gradient {
+  background: linear-gradient(135deg, #FFFFFF 0%, #E2E8F0 60%, #CBD5E1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.card-3d-premium {
+  background: #FFFFFF;
+  color: #0F172A;
+  border-radius: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 18px 40px -10px rgba(0, 0, 0, 0.45), 
+              0 6px 16px -3px rgba(35, 4, 9, 0.25),
+              inset 0 1px 1.5px rgba(255, 255, 255, 1);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-3d-premium:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 26px 50px -10px rgba(0, 0, 0, 0.55), 
+              0 12px 22px -3px rgba(35, 4, 9, 0.35);
+}
+
+

@@ -1,0 +1,6 @@
+{
+  "name": "Clínica Antares Odontologia",
+  "description": "Bio Site e Landing Page oficial da Clínica Antares Odontologia em Maceió/AL. Atendimento odontológico com excelência, tecnologia e profissionais qualificados.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
