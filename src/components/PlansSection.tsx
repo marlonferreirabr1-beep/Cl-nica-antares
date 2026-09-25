@@ -53,7 +53,7 @@ export const PlansSection: React.FC = () => {
           Pensando em facilitar o cuidado com o seu sorriso, nossa clínica é credenciada aos planos:
         </motion.p>
 
-        {/* 11 Dental Plans Grid with Floating White Luxury Cards */}
+        {/* 12 Dental Plans Grid with Floating White Luxury Cards */}
         <div className="w-full grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4">
           {DENTAL_PLANS.map((plan, index) => (
             <motion.div

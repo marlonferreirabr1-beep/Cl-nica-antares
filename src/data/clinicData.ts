@@ -166,5 +166,13 @@ export const DENTAL_PLANS: DentalPlan[] = [
     accentColor: '#006699',
     symbol: 'DW',
     logoUrl: '/assets/plans/dentalwhite.png'
+  },
+  {
+    id: 'uniodonto',
+    name: 'Uniodonto',
+    category: 'Cooperativa Dental',
+    accentColor: '#8B1B3F',
+    symbol: 'UD',
+    logoUrl: '/assets/plans/uniodonto.png'
   }
 ];
