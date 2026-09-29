@@ -313,14 +313,14 @@ export const AboutSection: React.FC = () => {
             </div>
 
             {/* Bottom info banner */}
-            <div className="mt-3 px-1.5 pb-0.5 flex items-center justify-between text-xs text-white">
-              <span className="font-semibold text-xs sm:text-sm text-white/95 truncate max-w-[240px] sm:max-w-sm">
+            <div className="mt-3 px-1.5 pb-0.5 flex items-center justify-between gap-2 text-xs text-white">
+              <span className="font-semibold text-xs sm:text-sm text-white/95 leading-snug flex-1">
                 {CLINIC_GALLERY[currentImageIndex].title}
               </span>
               <button
                 type="button"
                 onClick={() => openLightbox(currentImageIndex)}
-                className="flex items-center gap-1.5 text-white/80 hover:text-white px-2.5 py-1 rounded-lg hover:bg-white/15 transition-colors cursor-pointer text-[11px] font-medium"
+                className="flex items-center gap-1.5 text-white/80 hover:text-white px-2.5 py-1 rounded-lg hover:bg-white/15 transition-colors cursor-pointer text-[11px] font-medium flex-shrink-0"
                 title="Abrir em tela cheia"
               >
                 <Maximize2 className="w-3.5 h-3.5 text-rose-300" />
@@ -523,9 +523,9 @@ export const AboutSection: React.FC = () => {
               </div>
 
               {/* Bottom footer bar */}
-              <div className="px-4 py-2.5 bg-slate-50 border-t border-slate-200/80 flex items-center justify-between text-xs text-slate-600">
-                <div className="flex items-center gap-2 truncate max-w-[240px] sm:max-w-xs">
-                  <span className="font-semibold text-[#7A1526]">
+              <div className="px-4 py-2.5 bg-slate-50 border-t border-slate-200/80 flex items-center justify-between gap-3 text-xs text-slate-600">
+                <div className="flex items-center gap-2 flex-1 pr-2">
+                  <span className="font-semibold text-[#7A1526] leading-snug">
                     {CLINIC_GALLERY[currentImageIndex].title}
                   </span>
                 </div>
