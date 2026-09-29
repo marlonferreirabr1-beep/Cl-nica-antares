@@ -68,14 +68,6 @@ const CLINIC_GALLERY: ClinicGalleryItem[] = [
     alt: 'Clínica Antares Odontologia — Segurança e Biossegurança',
     title: 'Segurança, Higiene e Biossegurança Rigorosa',
     tag: 'Biossegurança'
-  },
-  {
-    id: 8,
-    url: 'https://i.postimg.cc/3r09Fw6y/IMG-20260929-WA0046(1).jpg',
-    fallbackUrl: '/assets/clinic_photo_8.jpg',
-    alt: 'Clínica Antares Odontologia — Espaço Planejado',
-    title: 'Espaço Planejado para o Seu Bem-Estar',
-    tag: 'Bem-Estar'
   }
 ];
 
@@ -83,6 +75,10 @@ export const AboutSection: React.FC = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [direction, setDirection] = useState(0);
   const [isModalOpen, setIsModalOpen] = useState(false);
+
+  // Safe active index in case list size changed
+  const activeIndex = currentImageIndex >= CLINIC_GALLERY.length ? 0 : currentImageIndex;
+  const activeImage = CLINIC_GALLERY[activeIndex];
 
   const nextImage = () => {
     setDirection(1);
@@ -231,10 +227,10 @@ export const AboutSection: React.FC = () => {
 
               <div className="flex items-center gap-2">
                 <span className="text-[11px] font-medium text-rose-200/90 bg-white/10 backdrop-blur-md px-2.5 py-1 rounded-full border border-white/15">
-                  {CLINIC_GALLERY[currentImageIndex].tag}
+                  {activeImage.tag}
                 </span>
                 <span className="text-[11px] font-bold text-white backdrop-blur-md bg-black/60 px-2.5 py-1 rounded-full border border-white/20 shadow-sm">
-                  {currentImageIndex + 1} / {CLINIC_GALLERY.length}
+                  {activeIndex + 1} / {CLINIC_GALLERY.length}
                 </span>
               </div>
             </div>
@@ -243,7 +239,7 @@ export const AboutSection: React.FC = () => {
             <div className="relative w-full rounded-2xl overflow-hidden bg-black/50 border border-white/10 flex items-center justify-center min-h-[440px] sm:min-h-[520px] select-none touch-pan-y">
               <AnimatePresence initial={false} custom={direction} mode="wait">
                 <motion.div
-                  key={currentImageIndex}
+                  key={activeIndex}
                   custom={direction}
                   variants={slideVariants}
                   initial="enter"
@@ -263,15 +259,15 @@ export const AboutSection: React.FC = () => {
                       prevImage();
                     }
                   }}
-                  onClick={() => openLightbox(currentImageIndex)}
+                  onClick={() => openLightbox(activeIndex)}
                   className="w-full h-full flex items-center justify-center cursor-grab active:cursor-grabbing p-1"
                 >
                   <img
-                    src={CLINIC_GALLERY[currentImageIndex].url}
-                    alt={CLINIC_GALLERY[currentImageIndex].alt}
+                    src={activeImage.url}
+                    alt={activeImage.alt}
                     referrerPolicy="no-referrer"
                     onError={(e) => {
-                      const fallback = CLINIC_GALLERY[currentImageIndex].fallbackUrl;
+                      const fallback = activeImage.fallbackUrl;
                       if (fallback && e.currentTarget.src !== fallback) {
                         e.currentTarget.src = fallback;
                       }
@@ -315,11 +311,11 @@ export const AboutSection: React.FC = () => {
             {/* Bottom info banner */}
             <div className="mt-3 px-1.5 pb-0.5 flex items-center justify-between gap-2 text-xs text-white">
               <span className="font-semibold text-xs sm:text-sm text-white/95 leading-snug flex-1">
-                {CLINIC_GALLERY[currentImageIndex].title}
+                {activeImage.title}
               </span>
               <button
                 type="button"
-                onClick={() => openLightbox(currentImageIndex)}
+                onClick={() => openLightbox(activeIndex)}
                 className="flex items-center gap-1.5 text-white/80 hover:text-white px-2.5 py-1 rounded-lg hover:bg-white/15 transition-colors cursor-pointer text-[11px] font-medium flex-shrink-0"
                 title="Abrir em tela cheia"
               >
@@ -334,14 +330,14 @@ export const AboutSection: React.FC = () => {
             <div className="w-full overflow-x-auto no-scrollbar py-1">
               <div className="flex items-center justify-start sm:justify-center gap-2 px-1 min-w-max mx-auto">
                 {CLINIC_GALLERY.map((item, index) => {
-                  const isActive = index === currentImageIndex;
+                  const isActive = index === activeIndex;
                   return (
                     <button
                       key={item.id}
                       id={`gallery-thumb-${index}`}
                       type="button"
                       onClick={() => {
-                        setDirection(index > currentImageIndex ? 1 : -1);
+                        setDirection(index > activeIndex ? 1 : -1);
                         setCurrentImageIndex(index);
                       }}
                       className={`relative w-14 h-14 sm:w-16 sm:h-16 rounded-xl overflow-hidden cursor-pointer transition-all duration-300 p-0.5 flex-shrink-0 ${
@@ -447,14 +443,14 @@ export const AboutSection: React.FC = () => {
                 <div className="flex items-center gap-2">
                   <Sparkles className="w-4 h-4 text-amber-300" />
                   <span className="font-heading font-bold text-sm">
-                    Clínica Antares ({currentImageIndex + 1} de {CLINIC_GALLERY.length})
+                    Clínica Antares ({activeIndex + 1} de {CLINIC_GALLERY.length})
                   </span>
                 </div>
 
                 <div className="flex items-center gap-2">
                   <a
                     id="open-original-image-link"
-                    href={CLINIC_GALLERY[currentImageIndex].url}
+                    href={activeImage.url}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-white transition-colors text-xs flex items-center gap-1 cursor-pointer"
@@ -479,12 +475,12 @@ export const AboutSection: React.FC = () => {
               <div className="relative p-2 sm:p-4 bg-slate-950 flex items-center justify-center min-h-[350px] max-h-[75vh] overflow-hidden">
                 <AnimatePresence mode="wait">
                   <motion.img
-                    key={currentImageIndex}
-                    src={CLINIC_GALLERY[currentImageIndex].url}
-                    alt={CLINIC_GALLERY[currentImageIndex].alt}
+                    key={activeIndex}
+                    src={activeImage.url}
+                    alt={activeImage.alt}
                     referrerPolicy="no-referrer"
                     onError={(e) => {
-                      const fallback = CLINIC_GALLERY[currentImageIndex].fallbackUrl;
+                      const fallback = activeImage.fallbackUrl;
                       if (fallback && e.currentTarget.src !== fallback) {
                         e.currentTarget.src = fallback;
                       }
@@ -526,7 +522,7 @@ export const AboutSection: React.FC = () => {
               <div className="px-4 py-2.5 bg-slate-50 border-t border-slate-200/80 flex items-center justify-between gap-3 text-xs text-slate-600">
                 <div className="flex items-center gap-2 flex-1 pr-2">
                   <span className="font-semibold text-[#7A1526] leading-snug">
-                    {CLINIC_GALLERY[currentImageIndex].title}
+                    {activeImage.title}
                   </span>
                 </div>
 
@@ -537,7 +533,7 @@ export const AboutSection: React.FC = () => {
                       type="button"
                       onClick={() => setCurrentImageIndex(dotIdx)}
                       className={`h-2 rounded-full transition-all cursor-pointer ${
-                        dotIdx === currentImageIndex 
+                        dotIdx === activeIndex 
                           ? 'w-5 bg-[#7A1526]' 
                           : 'w-2 bg-slate-300 hover:bg-slate-400'
                       }`}
