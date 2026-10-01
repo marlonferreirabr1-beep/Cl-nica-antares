@@ -160,14 +160,6 @@ export const DENTAL_PLANS: DentalPlan[] = [
     logoUrl: '/assets/plans/rededental.png'
   },
   {
-    id: 'dentalwhite',
-    name: 'DentalWhite',
-    category: 'Planos Odonto',
-    accentColor: '#006699',
-    symbol: 'DW',
-    logoUrl: '/assets/plans/dentalwhite.png'
-  },
-  {
     id: 'uniodonto',
     name: 'Uniodonto',
     category: 'Cooperativa Dental',
